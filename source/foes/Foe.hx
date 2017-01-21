@@ -20,9 +20,9 @@ class Foe extends FlxSprite
 		speed = 0;
 	}
 	
-	override public function update():Void 
+	override public function update(elasped:Float):Void 
 	{
-		super.update();
+		super.update(elasped);
 
 		if (playing) 
 		{

@@ -98,12 +98,13 @@ class PlayState extends FlxState
 		hudCam.follow(hud.background);
 		FlxG.cameras.add(hudCam);
 
-		FlxG.camera.setBounds(tabble.Min_X * 1.5,
+		
+		FlxG.camera.setScrollBoundsRect(tabble.Min_X * 1.5,
 							tabble.Min_Y *1.5,
 							(tabble.Max_X + Math.abs(tabble.Min_X)) * 1.5,
 							 (tabble.Max_Y + Math.abs(tabble.Min_Y)) * 1.5,
 							 true);
-		FlxG.camera.follow(player, 0, null, 0);
+		FlxG.camera.follow(player, FlxCameraFollowStyle.LOCKON, 1);
 	}
 
 	private function createFloor() 
@@ -130,9 +131,9 @@ class PlayState extends FlxState
 		tabble.Max_X = i;
 	}
 	
-	override public function update():Void 
+	override public function update(elasped:Float):Void 
 	{	
-		super.update();
+		super.update(elasped);
 
 		if (hud.lives < 0) 
 		{

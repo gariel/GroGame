@@ -46,7 +46,7 @@ class HUD extends FlxGroup
 		txt.setFormat(null, 16, 0x55FF55);
 	}
 
-	public override function update()
+	public override function update(elasped:Float)
 	{
 		if(playing)
 		{

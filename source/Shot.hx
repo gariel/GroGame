@@ -33,8 +33,8 @@ class Shot extends FlxSprite
 		y += speed * point.y;
 	}
 	
-	override public function update():Void 
+	override public function update(elasped:Float):Void 
 	{
-		super.update();
+		super.update(elasped);
 	}
 }

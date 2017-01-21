@@ -15,9 +15,9 @@ class Player extends FlxSprite
 		this.tabble = tabble;
 	}
 	
-	override public function update():Void 
+	override public function update(elasped:Float):Void 
 	{
-		super.update();
+		super.update(elasped);
 	}
 
 	public function move(p:Point):Void
